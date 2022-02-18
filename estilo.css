@@ -1,6 +1,6 @@
 body{
     background: url(imagens/bg.jpg) no-repeat;
-   
+   cursor: url(imagens/mata_mosca.png) 2 2, auto;
 }
 .painel{
    position: absolute;

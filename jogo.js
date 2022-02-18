@@ -1,6 +1,7 @@
 //Definição de palco
 var altura = 0
 var largura = 0
+var vidas = 1
 const ajustaPalco = () => {
     altura = window.innerHeight
     largura = window.innerWidth
@@ -15,6 +16,9 @@ function posicaoAleatoria() {
     //Remover mosquito anterior
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove()
+        document.getElementById('v'+vidas).src = 'imagens/coracao_vazio.png'
+
+        vidas++
     }
     //Definir posições
     var posicaoX = Math.floor(Math.random() * largura) - 100
@@ -33,6 +37,9 @@ function posicaoAleatoria() {
     mosquito.style.left = posicaoX + 'px'
     mosquito.style.top = posicaoY + 'px'
     mosquito.id = 'mosquito'
+    mosquito.onclick = function(){
+        this.remove()
+    }
 
     document.body.appendChild(mosquito)
 
@@ -60,3 +67,5 @@ function ladoAleatorio() {
             return 'ladoB'
     }
 }
+
+// Interação
