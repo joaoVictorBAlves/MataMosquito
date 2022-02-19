@@ -4,6 +4,13 @@ html{
 body{
     background: url(imagens/bg.jpg) no-repeat;
 }
+a{
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+}
+a:hover{
+    color: rgb(255, 255, 255);
+}
 .painel{
    position: absolute;
    width: 190px;
